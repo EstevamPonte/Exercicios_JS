@@ -1,0 +1,48 @@
+<!-- aula 169 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios HTML</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href="exercicios/teste.html"> 00-Teste|</a>
+        <a href="exercicios/texto1.html"> 01-Texto|</a>
+        <a href="exercicios/texto2.html"> 02-Texto|</a>
+        <a href="exercicios/lista.html"> 03-Listas</a>
+        <a href="exercicios/listaAninhada.html"> 04-ListaAninhadas|</a>
+        <a href="exercicios/links.html"> 05-Links|</a>
+        <a href="exercicios/tabelas.html"> 06-Tabelas|</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        Curso de web moderno
+    </footer>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.onclick = function(e) {
+                e.preventDefault()
+                
+                const conteudo = document.getElementById('conteudo')
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })    
+    </script>
+</body>
+</html>
+
+
