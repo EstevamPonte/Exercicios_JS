@@ -5,7 +5,62 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static { /* Nao muda nada pois a posicao é estatica */
+            top: 100px;
+            left: 100px;
+            background-color: steelblue;
+        }
+
+        .fixed { /* fica fixo na tela */
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 { /* Leva em consideracao os outros elementos */
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 { /* Nao leva em consideracao os outros elementos */
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+        .absolute2 {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky { /* de acordo com a rolagem, o elemento continua na tela */ 
+            position: -webkit-sticky;
+            position: sticky;
+            background-color: #777;
+            top: 10px;
+        }
     </style>
 </head>
 
