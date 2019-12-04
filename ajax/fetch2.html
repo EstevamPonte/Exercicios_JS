@@ -31,24 +31,15 @@
     <script>
         document.usuarioForm.onsubmit = async e => {
             e.preventDefault()
-<<<<<<< HEAD
 
             const form = e.target
             const data = new FormData(form)
             data.append('ajax', true)
-=======
-            
-            const form = e.target
-            const data = new FormData(form)
-            data.append('ajax', true)
-
->>>>>>> a28fe391babcea70a7bc1bea31f16bf9e5c4a7e0
             const options = {
                 method: form.method,
                 body: new URLSearchParams(data)
             }
 
-<<<<<<< HEAD
             const resultado = document.getElementById('resultado')
 
             // fetch(form.action, options)
@@ -67,14 +58,6 @@
             } catch (e) {
                 resultado.innerHTML = e
             }
-=======
-            fetch(form.action, options)
-                .then(resp => resp.json())
-                .then(json => {
-                    const resultado = document.getElementById('resultado')
-                    resultado.innerHTML = JSON.stringify(json)
-                })
->>>>>>> a28fe391babcea70a7bc1bea31f16bf9e5c4a7e0
         }
     </script>
 </body>
